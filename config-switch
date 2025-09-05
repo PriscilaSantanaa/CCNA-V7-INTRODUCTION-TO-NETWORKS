@@ -1,0 +1,56 @@
+rommon -> resetando o aparelho
+
+flash_init (selecionar flash)
+boot
+
+==============================
+delete flash:config.text
+y
+==============================
+delete flash:vlan.dat
+y
+==============================
+dir flash:
+(deletar todos os vlan.dat e config.text)
+boot
+
+
+(configuração)
+
+enable
+configure terminal
+hostname SW
+enable secret redes123
+banner motd @
+===========================
+=     ACESSO RESTRITO!    =
+===========================
+line vty 0 15
+password redes123
+login
+service password-encryption
+no ip domain-lookup (comando que facilita quando erramos os comandos)
+
+
+# # aumentar a fonte # #
+abrir o putty novamente
+> window
+ > appearance
+  > font: 14 (mudamos o tamanho da fonte)
+
+quando dermos um dir flash: vemos que não possui o arquivo vlan.dat. como fazemos ele aparecer? ele aparece a partir do momento que criamos uma vlan diferente da padrão
+
+
+# # svi 10.0.0.1/8 # # (svi: service virtual interface = vlan)
+interface vlan 99
+ip address 10.0.0.1 255.0.0.0
+description gerencia
+
+vlan 10
+vlan 20
+exit
+wr
+copy running-config startup-config
+
+ATENCAO: os comandos "interface vlan 10" e "vlan 10" são diferentes! usamos a interface quando queremos atribuir um IP. como o switch não trabalha com IPs nas portas, usamos a interface virtual.
+quando formos atribuir uma interface para acesso remoto usamos o comando interface e atribuímos IP. quando usamos somente o "vlan x" atribuiremos as portas físicas do switch à vlan.
