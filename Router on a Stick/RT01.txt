@@ -1,0 +1,27 @@
+enable
+configure terminal
+no ip domain-lookup
+hostname RT-02
+enable secret redes123
+service password-encryption
+interface g0/0
+no ip address
+no shutdown
+exit
+interface g0/0.40
+encapsulation dot1q 40
+ip address 172.16.40.254 255.255.255.0
+exit
+interface g0/0.50
+encapsulation dot1q 50
+ip address 172.16.50.254 255.255.255.0
+exit
+interface g0/0.60
+encapsulation dot1q 60
+ip address 172.16.60.254 255.255.255.0
+exit
+interface g0/0.99
+encapsulation dot1q 99
+ip address 172.16.99.253 255.255.255.0
+end
+wr
