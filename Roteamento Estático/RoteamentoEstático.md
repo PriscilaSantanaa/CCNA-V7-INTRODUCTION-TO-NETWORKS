@@ -13,6 +13,7 @@ a atualização não é automatica, logo, caso ocorra qualquer alteração na re
 é o oposto do roteamento dinâmico, aquele que usamos protocolos como OSPF, RIP ou BGP que descobrem a melhor rota de maneira automática.<br>
 
 #### Cenário:
-<img width="1426" height="595" alt="image" src="/home/priscilasantana/Documentos/CCNA-V7-INTRODUCTION-TO-NETWORKS/Roteamento Estático/Captura de tela de 2025-10-04 14-39-48.png" />
+<img width="1426" height="595" alt="image" src="https://github.com/PriscilaSantanaa/CCNA-V7-INTRODUCTION-TO-NETWORKS/blob/main/Roteamento%20Est%C3%A1tico/Captura%20de%20tela%20de%202025-10-04%2014-39-48.png" />
 <br>
 **script com configuração dos equipamentos dentro do diretório em .txt
+
