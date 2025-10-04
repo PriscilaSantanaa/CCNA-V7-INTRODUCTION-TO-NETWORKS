@@ -1,0 +1,28 @@
+enable
+configure terminal
+no ip domain-lookup
+hostname RT-MG
+enable secret redes123
+banner motd @
+=====================================
+=======   ACESSO RESTRITO!!   =======
+=====================================
+@
+interface g0/0
+ip address 192.168.3.254 255.255.255.0
+no shutdown
+interface s0/0/0
+ip address 10.0.0.9 255.255.255.252
+no shutdown
+interface s0/0/1
+ip address 10.0.0.6 255.255.255.252
+exit
+wr
+configure terminal
+ip route 192.168.2.0 255.255.255.0 10.0.0.5
+ip route 192.168.1.0 255.255.255.0 10.0.0.5
+ip route 192.168.4.0 255.255.255.0 10.0.0.10
+ip route 10.0.0.0 255.255.255.252 10.0.0.5
+ip route 10.0.0.12 255.255.255.252 10.0.0.10
+exit
+wr
