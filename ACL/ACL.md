@@ -10,4 +10,4 @@ Os roteadores Cisco oferecem suporte a dois tipos de ACL:
 - ACLs estendidas: Filtram na camada 3 usando o endereço IPv4 de origem e/ou destino. Essas ACLs também podem filtrar na camada 4 usando portas TCP, UDP, serviços, etc.
 <br></br>
 ### Cenário:
-<img src="/home/priscilasantana/Documentos/Captura de tela de 2025-10-04 14-39-48.png" width="300px"/>
+<img src="https://github.com/PriscilaSantanaa/CCNA-V7-INTRODUCTION-TO-NETWORKS/blob/main/ACL/Captura%20de%20tela%20de%202025-12-16%2020-18-28.png" width="880px"/>
